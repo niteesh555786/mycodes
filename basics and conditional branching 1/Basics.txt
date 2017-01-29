@@ -1,0 +1,67 @@
+What is a computer?
+A computer is a device that can execute
+programs.
+--------------------------------------
+What is a program?
+A program is software module that contains
+* Code
+* Data
+
+Code
+-----
+Code is a set of instructions of a program.
+It is enclosed in a block, called as a function.
+
+Function
+--------
+A function is a set, that contains instructions of a program.
+It has a unique name for its identification.
+It can execute, if called (invoked).
+
+A C program must define a special function
+named as "main", because O/S invokes it.
+i.e. Program execution begins with main()
+and in fact it also ends with the end of main().
+Hence said main() function defines life cycle
+of a C program.
+
+Functions may be categorized as
+1) Predefined : Pre developed functions that are enclosed in header files. Ideally they contain general purpose code.
+2) Userdefined : User developed functions that are need of the program.
+
+Data
+-----
+Data is information of a program.
+It can be categorized as :
+* Input
+* Output
+
+Input is the information that we give in to a program.
+Output is the information that a program generates.
+
+The input and output of a program must be stored in variables.
+
+Variables
+---------
+A variable is a block of memory (RAM).
+It has a unique name for its identification.
+It allows storage and retrieval of data.
+It can store one value at one time.
+Its value can change.
+
+--------------------------------------
+Header File
+ A header file is a collection of predefined functions.
+ It can be included in a C program.
+ Next the C program can utilize (invoke) any/all of the included functions.
+ It has extension .h
+ 
+--------------------------------------
+Steps to define a C Program
+
+1) include header files
+2) define functions of choices
+3) define a function named as main
+4) User defined functions to contain
+code and data as per the need of the
+program.

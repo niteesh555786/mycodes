@@ -1,0 +1,38 @@
+Combining Conditions
+------------------
+C supports combination of
+multiple conditions and their
+evaluation as a single boolean
+result using :
+Logical AND (&&)
+Logical OR (||) 
+
+System evaluates all the conditions
+(or may have a short circuit)
+and generates individual boolean
+results.
+Next system combines the 
+boolean results using Logical 
+AND (&&) or Logical OR (||)
+as used.
+
+Results are based on following
+truth tables.
+
+Truth Table : Logical And (&&)
+  T && T = T
+  T && F = F
+  F && T = F
+  F && F = F
+
+Truth Table : Logical Or (&&)
+  T || T = T
+  T || F = T
+  F || T = T
+  F || F = F
+
+Tip:
+Priority of && is higher than
+that of ||.
+Their associativity is Left to Right.
+
