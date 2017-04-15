@@ -1,0 +1,112 @@
+class 
+-------
+A class is a collection of functions 
+and data members.
+It defines a custom secondary datatype.
+Making a class is implementing OOP concept
+Encapsulation.
+
+Member Variables
+------------------
+Member variables are the data members
+that belong to a class.
+It represents state of an object.
+
+Member Functions
+--------------------
+Member functions are functions that
+belong to a class.
+They perform an operation for an object.
+
+Object
+---------
+Object is an instance of a class.
+Object can store and process data.
+Its storage capacity is defined by the
+member variables of the class.
+Its processing capacity is defined by
+the member functions of the class.
+
+this
+------
+this is a system defined formal parameter
+for member functions of the class.
+
+It is a pointer of type current class.
+
+this is initialized with the address of the
+caller object of the function.
+
+this is used to identify the object inside
+the member function.
+
+this is a constant pointer, cannot be modified
+to refer to any other address.
+
+constructor
+-------------
+A constructor is a special member function
+of the class.
+It has the same name as of the class and no
+return type specification.
+It is auto invoked as object of the class is
+created.
+It is used to initialize the object.
+
+Constructor Overloading
+-----------------------
+Constructor Overloading is defining multiple
+constructors for a class with different
+set of parameters.
+
+Destructor
+-------------
+A destructor is a special member function of the class.
+It has the same name as of the  class preceeded by a ~  
+and  has no return type specification.
+It is always parameterless.
+It cannot be overloaded.
+It gets invoked automatically as life of the object gets over.
+It is used to clear the resources used by the object.
+
+new
+-----
+Operator new is used to dynamically allocate
+memory for objects and arrays.
+For array creation it takes the syntax :
+  ptr = new datatype[arraySize];
+For object creation it takes the syntax :
+  ptr = new class(parameters);
+
+Such an array or object : 
+ 1) gets allocated in heap segment of RAM.
+ 2) is accessible through its address only.
+ 3) has custom life that is controlled by code.
+
+delete
+--------
+Operator delete is used to dynamically deallocate
+memory for objects and arrays allocated using
+operator new.
+For deallocation it takes the syntax :
+  delete ptr;
+Where ptr is a pointer to array or object
+allocated using new.
+ 
+Operator Overloading 
+--------------------
+Operator Overloading is defining
+operator functions that provide 
+the logic of operator action on the
+objects of secondary datatypes.
+
+Function Overloading 
+--------------------
+Function overloading is defining multiple
+functions with the same name and different 
+set of parameters.
+
+
+Inheritance 
+--------------
+See inheritance.txt

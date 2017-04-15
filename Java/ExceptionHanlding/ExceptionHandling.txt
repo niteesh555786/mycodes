@@ -1,0 +1,130 @@
+Exceptions
+------------
+Exceptions are runtime errors that 
+cause abnormal program termination.
+
+Exception Handling
+-------------------
+Exception handling is the mechanism
+applied to protect the program from
+termination due to exceptions.
+
+To implement Exception Handling
+ 1) Enclose the statements that may
+ raise exceptions, in a try block.
+ 2) Associate one to many catch blocks
+ with the try.
+ 3) Optionally associate a finally block
+ with the try or try-catch set.
+  
+
+
+try
+-----
+ try block contains the program code
+ that may cause exceptions.
+ If an exception occurs in code that is
+ enclosed in try then abnormal termination
+ doesnt occur but the program control
+ is transferred to a catch block for 
+ exception resolution.
+ If the raised exception cannot be resolved
+ by any associate catch block then abnormal
+ program termination would occur.
+
+ catch
+--------
+ catch block is the exception handler.
+ It neutralizes the raised execption.
+ After catch normal program execution
+ continues ahead.
+
+ finally
+--------
+ finally block contains code that must
+ execute in all cases.
+ * No exception occurred.
+ * Exception occurred and got handled.
+ * Exception occurred but was not handled.
+
+When some resource is allocated in try
+then it can be deallocated in finally.
+
+Exception Propagation using throws 
+--------------------------------
+Many times multiple methods collectively 
+contribute towards the processing of an 
+operation.
+
+In other words an operation is performed 
+by a set of methods.
+
+Such operations are like transactions
+that must succeed or fail as a unit.
+
+In such cases if some exception raises 
+in a method and is handled locally then :
+1) Some statements that got skipped 
+will not result.
+2) Method will complete successfully
+because the exception gets neutralized.
+
+When next method (next portion of operation)
+relies on the result that did not generate 
+in the previous method (first portion of operation)
+then even more critical errors will generate.
+
+To avoid such issues one must analyze 
+dependency of methods on one another.
+
+One must ensure successful completion 
+of a method only if it generates the 
+desired results.
+
+Hence for the methods that form a 
+transaction one must not handle the 
+exceptions locally but must transfer 
+them on the caller method.
+
+To do this exception propagation one 
+uses throws statement.
+
+"throws" statement is a notification
+to a caller method, that this method
+may raise exceptions but wont handle
+them, instead the same would be 
+transferred on to the caller method.
+
+And hence the exception handling 
+be performed by the caller method.
+
+User Defined Exceptions
+-----------------------
+Java allows creation of user defined 
+exception by definition of a class that 
+extends Exception.
+
+An application creates it own exceptions 
+to handle logical issues corresponding to 
+it.
+
+It is the responsibility of the application 
+code to :
+1) Identify a logical issue.
+2) Raise an exception.
+
+To raise an exception :
+1) Create object of Exception or of its sub class.
+2) throw <object>
+
+throw 
+-------
+throw statement is used to generate (raise)
+an exception.
+It takes the syntax :
+  throw <object of Exception or its sub class>
+
+TIP :
+An explicitly raised exception must be
+propagated on to the caller method using
+throws. 

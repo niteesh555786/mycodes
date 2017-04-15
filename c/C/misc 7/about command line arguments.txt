@@ -1,0 +1,45 @@
+A C program is compiled and build
+to form an executable application.
+
+The application can directly execute
+on the operating system.
+
+When such a C application is executed
+from DOS/LINUX shell then "parameters"
+can be passed alongwith the application
+invokation.
+Such parameters are called as 
+"Command line arguments".
+
+In other words :
+Command line arguments are parameters
+passed from the DOS/LINUX shell
+to the main function of the C application.
+
+How it works
+-------------
+System fetches the command line arguments
+and forms a String array.
+
+The size of the command line argument
+array and the initial address of the array
+are passed as actual parameters to the
+main function of the C application.
+
+The signature of the main function is
+modified to receive the arguments.
+
+Original : int main() 
+Modified : int main(int argc, char **argv)
+
+Here the first actual parameter is 
+an int and it gets the number (count)
+of command line arguments.
+
+And the second actual parameter is
+a pointer to a String array and it
+refers to the command line arguments.
+
+Note that the name of the C application
+is also placed in the command line arguments
+as the first parameter.

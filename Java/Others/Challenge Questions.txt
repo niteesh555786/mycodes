@@ -1,0 +1,12 @@
+===============================
+Find the next prime number
+===============================
+Implement Bucket Sort in Java
+===============================
+Implement a Stack Using Array
+===============================
+As per your creativity try to make anything that uses a Singleton pattern.
+===============================
+Write in detail the execution steps of 
+the code of Type Compatibility.java
+(How it is working).

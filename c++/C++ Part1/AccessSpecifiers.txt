@@ -1,0 +1,42 @@
+Access Specifiers
+------------------
+ Access Specifiers control the usability
+ of members (data and functions) of a 
+ class or a struct.
+
+ C++ provides 3 access specifiers.
+ 1) private (default for a class)
+ 2) protected 
+ 3) public (default for a struct)
+
+ private 
+---------
+ private access specifier limits the usage
+ of the member (data or function) within
+ the class or struct only.
+ A private member is not accessible to
+ members of other classes or structs or
+ to non members.
+
+ protected
+-----------
+ protected access specifier limits the usage
+ of the member (data or function) within
+  1) the class or struct only
+  2) the derived class or struct only
+
+ A protected member is not accessible to
+ members of other classes or structs or
+ to non members.
+
+ public
+-------
+ public access specifier puts no limit on the
+ usage of the member (data or function).
+
+ A public member is accessible within:
+ 1) Current class or struct
+ 2) Derived class or struct
+ 3) Other classes or structs 
+ 4) Non members.
+

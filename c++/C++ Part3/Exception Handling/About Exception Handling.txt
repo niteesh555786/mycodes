@@ -1,0 +1,82 @@
+Exception 
+---------- 
+Exceptions are runtime errors that 
+cause abnormal program termination. 
+ 
+Aim 
+----- 
+To develop robust applications that do 
+not terminate abnormally.
+
+Exception Handling 
+-------------------- 
+Exception handling is a mechanism applied 
+to protect the program from termination 
+due to exceptions. 
+ 
+Steps to implement Exception Handling :
+------------------------------------------ 
+1) Enclose the program logic statements 
+in a try block.
+These statements may raise exceptions.  
+
+2) Associate one to many catch blocks 
+with the try block. 
+Put that code in catch which must execute 
+on exception. 
+ 
+About try block
+------------------ 
+try block contains program statements 
+that may raise exceptions. 
+ 
+Being in try the statements are monitored 
+for exceptions. 
+If an exception occurs in try then application 
+does not terminate but program control  
+is transferred from the point of exception 
+to a catch block that handles the exception. 
+ 
+If an exception occurs in try and it has 
+no corresponding catch handler block then 
+it will cause abnormal program termination.  
+ 
+About catch block 
+-------------------- 
+A catch block is an exception handler. 
+It neutralizes the raised exception and 
+makes program control resume with 
+execution of code ahead. 
+
+One catch block can handle one type of 
+exception. 
+Hence for the multiple exceptions that 
+may arise in the try block there are 
+multiple catch blocks associated with try. 
+ 
+But C++ supports definition of a generic 
+exception handler. 
+It is a catch block that alone can handle 
+all the exceptions. 
+ 
+try
+{
+  ----  
+  ----
+} 
+catch(...)   
+{  
+  cout<<"\n I handle all the exceptions";
+}  
+  
+throw
+-------- 
+Exceptions may be caused by the system 
+but generally they are raised by code itself.
+ 
+On detection of some logical issue our code 
+must raise an exception. 
+To do so it uses "throw" statement.
+ 
+Syntax:
+       throw <valueOfAnyDataType>;

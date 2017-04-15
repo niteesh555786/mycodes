@@ -1,0 +1,58 @@
+Java allows formation secondary datatype
+through classes.
+Being a datatype it (class) is used by 
+instantiation.
+
+Object (instance) creation  is a three step
+process :
+1) Memory Allocation
+2) Execution of non static initializer block
+3) Execution of constructor
+
+
+Memory Allocation
+-------------------
+An object gets allocated in the heap seg.
+of RAM.
+It is a composite block formed by a collection
+of the non static data members declared by 
+the class.
+
+Non static Initializer Block
+--------------------------
+A non static initializer block is a block 
+of code (without any signature) that 
+belongs to the class.
+It gets auto executed for every object
+created.
+It is used to initialize the data members
+of the object.
+A class may have multiple non static
+initializer blocks.
+In such a case all the blocks get executed
+per object created. 
+The order of execution is the top to bottom
+order of definition in the class. 
+
+Constructor
+-------------
+A constructor is a special method of the
+class.
+It has the same name as of the class and
+no return type specification.
+It gets auto executed for every object
+created.
+It is used to initialize the data members
+of the object.
+
+Java allows definition of multiple constructors
+for a class, each with a unqiue set of parameters.
+This is termed as Constructor Overloading.
+
+Overloading constructors is implementing
+polymorphism. 
+
+Recall that polymorphism allows definition
+of multiple ways to perform a task.
+And the multiple constructor allows multiple
+ways of initialization of the object.

@@ -1,0 +1,352 @@
+Inheritance
+--------------
+Inheritance is the mechanism to create
+new derived classes (entites) from existing
+classes (entities).
+
+The inherited class is termed as the base class.
+The inheriting class is termed as the derived class.
+
+By inheritance the derived class gets :
+ * CODE
+ * DATA
+ * TYPE COMPATIBILITY
+from the base class.
+
+The derived class is a host for extended
+code and data.
+
+Syntax :
+---------
+class Base
+{
+ ...
+};
+class Derived : <accessSpecifier> Base
+{
+ ...
+};
+
+Operator : is used to apply inheritance in C++.
+The possible list of access specifiers are :-
+  1) private (default)
+  2) protected 
+  3) public
+
+For details refer
+* private inheritance.png
+* protected inheritance.png
+* public inheritance.png
+
+Function Overriding
+-------------------
+Function overriding is redefining a base class 
+non static function in the derived class 
+keeping the functions signature same.
+
+Function overriding is applying polymorphism
+(one operation done in multiple ways) across
+a hierarchy of classes.
+
+
+Type Compatibility
+-------------------
+Type Compatibility is the ability of a base
+class pointer/reference to refer to an 
+object of derived class.
+Reverse is not true.
+
+When a base class pointer is used to refer
+to an object of base class then it can access
+all the members of the class.
+
+When a base class pointer is used to refer
+to an object of derived class then it can 
+access only the inherited and overridden
+members of the derived class.
+The extended code and data of the derived
+class is not accessible through a base class
+pointer or reference.
+
+Binding
+---------
+Binding is linking a function call with the
+functions definition.
+Primarily it is the role of the compiler to 
+perform binding.
+
+Compiler binds function calls with their
+definitions by matching the signatures used
+in the calls and provided by the definitions.
+
+While binding a function call, if a function
+definition with matching signature is found
+then binding is performed.
+But if not found then compile error is raised.
+
+As compiler performs binding, so it is done
+at compile time and hence often referred
+as compile time binding.
+Cases of compile time binding are :
+ 1) Normal function calls
+ 2) Function Overloading
+ 3) Constructor Overloading
+ 4) Operator Overloading 
+Are all resolved at compile time.
+
+Case of failure in binding
+-------------------------
+When inheritance is applied it is obvious
+to find overridden functions and type compatibility 
+applied.
+
+A case when using a base class reference
+(or a pointer) an overidden function is 
+called.
+See the statement in code: 
+   ptrA->f2();
+
+For such a statement compiler is at ambiguity
+due to 2 reasons :
+1) The pointer is able to refer to objects
+of own type as well as derived type, for
+which type of object it is currently refering
+to is not clear.
+2) The call being of an overridden function
+so the same signature is applied to multiple
+definitions. Hence signature matching technique
+fails.
+
+In such cases the compiler binds the call 
+to overriden function with the definition
+provided by the base class, because the
+pointer is of base class.
+(This is a misbehaviour.)
+
+Pratically the need is to refer to the type
+of object and bind the call with the definition
+provided by the class of the object.
+
+
+Solution
+---------
+To activate runtime binding.
+For which the overridden method is declared 
+as "virtual" in the base class.
+
+
+Runtime Binding
+-----------------
+C++ implements runtime binding when for 
+the call following criteria's are met :
+1) Inheritance
+2) Function Overriding
+3) Overridden function declared as "virtual" in base class.
+4) Base class pointer, that may refer to object of Base or Derived class, is used to invoke the function.
+
+When compiler encounters a call that meets
+the above criteria then compiler skips the
+binding for the call.
+
+At execution time, system encounters a
+function call that is not bound to any definition.
+Then system invokes RTTI (run time type
+identification) mechanism to detect which
+is the class of object being referred by the
+base class pointer.
+After that the call is bound to the defintion
+provided by that class.
+
+virtual
+---------
+virtual attribute applied to overridden
+function enables runtime binding for calls
+to it through a base class pointer.
+
+Inheritance of Data
+--------------------
+C++ system implements inheritance of
+data (non static) members as object of
+the derived class is created.
+
+The object of derived class is a composite
+block of memory formed by data (non static)
+members of the base and of the derived
+classes.
+
+C++ system would invoke constructors of
+Base and Derived classes to initialize the
+object (composite memory block) of the 
+Derived class.
+
+Sequence of constructor invokation would be :
+1) Base class constructor first.
+2) Derived class constructor next.
+
+Selecting the constructor to execute
+----------------------------------
+When object of derived class is created
+without parameters then the default constructors
+of the Base and of the Derived class execute.
+
+When object of derived class is created
+with parameters then the default constructor
+of the Base and the parameterized constructor
+of the Derived class execute.
+
+Inorder to invoke the parameterized constructor
+of the base class, the derived class constructor
+must pass parameters to it.
+
+Destruction of object of Derived class
+------------------------------------
+When the derived class object is to be 
+destroyed :
+1) Destructor of derived class executes.
+2) Destructor of base class executes.
+3) Memory is deallocated.
+
+virtual destructor
+-----------------
+Known that when an object of the derived
+class is to be destroyed then the destructors
+of the derived and the base class, both
+get executed.
+
+But this normal behaviour of the system
+gets modified when :
+1) An object of derived class is dynamically allocated.
+2) It is referred by a pointer of base class.
+3) delete is called on the base class pointer for deallocation.
+
+Only the destructor of the base class executes.
+The execution of the derived class destructor gets skipped.
+
+In such a case to make the system execute the 
+destructors of the derived and the base class, 
+the base destructor is declared as "virtual".
+
+i.e.
+Destructor of the base class when declared as
+"virtual" would allow execution of destructors
+of the derived and the base class as delete is
+called on a base class pointer refering to a 
+dynamically created derived class object.
+
+
+Multilevel Inheritance
+----------------------
+C++ allows implementation of multi level
+inheritance.
+
+Multi level inheritance is formation of a
+hierarchy of classes by making a derived
+class act as a base class for another class.
+
+When multi level inheritance is applied
+then the derived most class ( class down
+in the hierarchy) gets :
+ * CODE
+ * DATA
+ * COMPATIBILITY
+from all the base classes (classes above 
+in th hierarchy).
+
+Multiple Inheritance
+----------------------
+C++ allows implementation of multiple
+inheritance.
+
+Multiple inheritance is formation of a
+derived class by inheriting more than
+one base classes.
+
+When multiple inheritance is applied
+then the derived class gets :
+ * CODE
+ * DATA
+ * COMPATIBILITY
+from all the base classes.
+
+Pure Virtual Function
+----------------------
+A pure virtual function is a function
+with signature only (declaration only)
+and no definition (no body).
+
+It is a function that makes the class
+an abstract class.
+
+It is a function that must be overridden
+by the derived classes.
+
+Abstract Class
+---------------
+An abstract class is a class that contains
+minimum one pure virtual function.
+
+It is a class that cannot be instantiated.
+
+It is a class that has to be inherited for use.
+i.e.
+All of its members : 
+ variables, functions, constructors, destructor
+are to be used by the derived classes.
+
+
+Hybrid Inheritance
+--------------------
+Hybrid inheritance is a combinition of
+multiple and multilevel inheritance.
+
+Due to hybrid inheritance a derived class
+gets CODE, DATA and COMPATIBILITY
+from all the base classes.
+
+Sometimes due to the design of the hybrid
+inheritance a derived class that is down in
+hierarchy inherits the same base class multiple
+times.
+"Use" of the multiple times inherited members
+"causes ambiguity" in the derived class.
+
+The ambiguity can be resolved in 3 ways :
+1) By explicit application of the base class
+reference to the ambiguous member.
+
+2) By overriding or redefining the ambiguous
+member in the derived class. The class level
+definition will shadow the ambiguous member.
+
+3) By making the class of the multiple times 
+inherited members as "virtual base class".
+
+Virtual Base Class
+-------------------
+Due to the design of the hybrid inheritance 
+a derived class that is down in hierarchy 
+inherits the same base class multiple times.
+
+"Use" of the multiple times inherited members
+"causes ambiguity" in the derived class.
+
+To resolve such an issue one solution is to
+make the class of the multiple times inherited
+members as the "Virtual Base Class".
+
+virtual attribute applied while inheritance
+1) Transmits all code, data and compatibility to the derived classes.
+2) Limits the derived classes not to transmit the members of the base class when they have a common derived class ahead.
+3) Then the members of the base class are directly transmitted to the derived class down in hierarchy.
+
+Even though the derived class that is down in hierarchy (class D)
+never directly inherits the base class that is up in the hierarchy (class A)
+still that class (class A) acts a base for the derived class (class D).
+This is class up in hierarchy acting as a Virtual Base Class.
+
+By this the derived class down in hierarchy inherits the members 
+of the Virtual Base Class only once and directly from itself, not via
+the intermediate classes in hierarchy.
+
+See the diagram : VirtualBase.png
+ 

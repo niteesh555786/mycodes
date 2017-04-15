@@ -1,0 +1,28 @@
+Memory Management
+---------------------
+Memory management includes
+allocation, use and deallocation.
+It can be done :
+1) By the System.
+2) By the Application (code).
+
+System managed memory
+-----------------------
+* Life of the memory block is 
+under control of the system.
+* Memory is usable by name
+or by address. 
+* Amount of memory reqd is
+predecided.
+* Examples : variables, arrays, ...
+
+Application managed memory
+-------------------------
+* Life of the memory block is 
+under control of the application.
+* Memory is usable by address. 
+* Amount of memory reqd is
+dynamically decided.
+* Examples : linked lists, trees, ...
+
+

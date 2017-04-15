@@ -1,0 +1,95 @@
+Preface
+--------
+Program data is stored in memory (RAM).
+Program can obtain memory in 2 ways :
+1) Declaration
+2) Allocation
+
+Declaration method is the commonly
+used method and it causes creation
+of memory blocks that are managed
+by the system.
+i.e. The creation, use and destruction
+of the memory block (variable) is under 
+system's control.
+
+Examples of memory obtained by declaration method:
+ int i;
+ float arr[4];
+
+Under allocation method program code
+takes control of life (creation, use and
+destruction) of the memory blocks.
+
+For implementing allocation method 
+to obtain, to use and to free the 
+memory blocks, a program uses functions 
+like :
+malloc(), calloc(), realloc() and free().
+
+malloc()
+--------
+malloc allocates a continuous memory
+block of specific size in heap segment 
+of RAM.
+
+malloc doesnt set the data type of the
+block and hence returns the starting 
+address of the allocated block in void
+pointer form.
+
+Hence we typecast (convert) the address
+returned by malloc into a datatype of 
+choice and then use the memory block.
+
+If malloc fails then it returns NULL.
+
+Memory allocated by malloc by default 
+has garbage in it.
+
+
+free
+-----
+free() function is used to deallocate
+the memory that was allocated using
+malloc(), calloc() or realloc().
+
+free() takes the starting address of
+the memory block as a parameter and
+deallocates it.
+
+
+realloc()
+--------
+realloc() is used to expand/shrink the
+memory allocated using malloc/calloc.
+
+It takes 2 parameters
+1) the address of memory block to be expanded/shrunk
+2) new size in bytes
+
+It makes the memory block of new size,
+preserving the data.
+
+It returns the starting address of the new block.
+
+
+calloc()
+--------
+calloc allocates a continuous memory
+block of specific size in heap segment 
+of RAM.
+
+calloc doesnt set the data type of the
+block and hence returns the starting 
+address of the allocated block in void
+pointer form.
+
+Hence we typecast (convert) the address
+returned by calloc into a datatype of 
+choice and then use the memory block.
+
+If calloc fails then it returns NULL.
+
+Memory allocated by calloc by default 
+is clear (garbage free).

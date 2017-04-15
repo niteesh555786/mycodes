@@ -1,0 +1,132 @@
+Preface
+--------
+A variable/array/... can be accessed
+(used) in 2 ways:
+1) By its name.
+2) By its memory location.
+
+Access by name is a common approach.
+Access by memory location requires 
+use of a pointer.
+
+Pointer
+-------
+A pointer is a variable that can
+* store memory location
+* be dereferenced
+
+Referencing
+-----------
+Referencing is assignment of a 
+memory location to a pointer.
+This is done using the operator : &
+
+Dereferencing 
+-------------
+Dereferencing is action taken on
+pointer to access (use) the 
+variable/array/..., address of which
+is stored in the pointer.
+This is done using the operator : *
+
+Declaration
+-----------
+To declare a pointer :
+  datatype * pointerName;
+
+
+Size of pointer
+--------------
+Every pointer, irrespective of its
+datatype, is of same size.
+
+On 16 bit platform it is of 2 bytes.
+On 32 bit platform it is of 4 bytes.
+
+Known that a pointer has to store 
+address, so its size corresponds to 
+the space required to store address.
+
+Datatype of Pointers
+------------------
+System uses datatype of pointer for
+2 reasons :
+1) Dereferencing
+2) Pointer Arithmetic
+
+Use of Datatype of Pointer for Dereferencing
+---------------------------------------
+Dereferencing is the action taken on
+pointer to get access of the referred
+variable/memory block.
+
+For dereferencing system requires
+a) Starting address (Where to begin dereferencing from)
+b) Length/Size (How many bytes to dereference)
+
+The starting address of the variable/memory block
+is stored in pointer.
+The length/size to be dereferenced
+comes from the size of datatype of
+the pointer.
+
+Hence a rule to match the datatype
+of pointer and of the referred variable/...
+
+Use of Datatype of Pointer in Arithmetic
+------------------------------------
+System supports 2 arithmetic operations
+on pointers:
+a) Addition of a whole number
+b) Subtraction of a whole number
+
+When a whole number (say 3) is
+added/subtracted to/from a pointer
+then the new address is generated
+as follows :
+
+We write :
+ newAddress = ptr + n;
+System solves :
+ newAddress = ptr + n * sizeof(datatype of pointer)
+
+We write :
+ newAddress = ptr - n ;
+System solves : 
+ newAddress = ptr - n * sizeof(datatype of pointer)
+
+Example :
+ Say an int ptr stores 1000 and we 
+ add 3 to it, so the resultant address 
+ will be 1012.
+
+ Say an char ptr stores 2000 and we 
+ add 4 to it, so the resultant address 
+ will be 2004.
+
+ ...
+
+void pointers
+------------
+refer about void.txt
+
+pointer to a pointer
+------------------
+A pointer, being a variable, has :
+1) a name 
+2) a unique address. 
+
+Hence a pointer can be accessed :
+1) by its name 
+2) by its address.
+
+To access a pointer by its address
+use pointer to a pointer.
+
+
+A pointer to a pointer is a variable
+that can :
+1) refer to a pointer
+2) be dereferenced
+3) be double dereferenced
+

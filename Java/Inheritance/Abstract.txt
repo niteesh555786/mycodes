@@ -1,0 +1,50 @@
+Abstract
+----------
+Java allows declaration of methods 
+and classes as "abstract".
+
+Abstract methods
+-----------------
+An abstract method is a method:
+ * With declaration (signature) only and not definition (body).
+ * That must be overridden by the sub classes.
+ * That makes the class abstract.
+
+Abstract class
+---------------
+An abstract class is a class:
+ * That cannot be instantiated.
+ * That must be inherited for use.
+ * That has ZERO to MANY abstract methods.
+
+Inheritance of Abstract Class
+----------------------------
+Known that by inheritance a sub
+class gets :
+ CODE 
+ DATA
+ COMPATIBILITY
+from the super class.
+
+As an abstract class is inherited the 
+sub class along with normal methods 
+also inherits the abstract methods.
+
+Due to presence of abstract methods 
+the sub class also turns abstract.
+
+If the sub class overrides all the
+abstract methods then it can become
+a normal class again.
+
+Q) Known that an abstract class 
+    cannot be instantiated, can it
+    have data members and constructors?
+A) YES.
+    Its data members would be the
+    data members of the sub class.
+    Its constructors would be invoked 
+    as object of the sub class is created.
+
+    In short, all that an abstract class 
+    defines is for its sub classes.

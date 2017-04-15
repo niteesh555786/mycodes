@@ -1,0 +1,12 @@
+Pointer to Object
+------------------
+C++ allows declaration of pointer of class type.
+Such a pointer can :
+ * refer to object of the class
+ * be dereferenced to access the members of the class.
+
+When the pointer is dereferences to access
+members of the class, the caller object for
+the access is the one address of which is
+stored in the pointer.
+ 

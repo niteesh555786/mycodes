@@ -1,0 +1,119 @@
+Stream
+---------
+A stream is a channel of data transfer
+established on a medium that interconnect
+multiple devices.
+
+A stream may be 
+* Unidirectional
+* Bidirectional
+Accordingly it would allow one way or two
+way data transfer.
+
+Operations on Stream
+-----------------------
+1) Opened : A channel of communication is formed.
+2) Data Transfer : Allows read / write on the channel. 
+3) Closed : The channel of communication is deallocated.
+
+A stream may be opened in 
+* Text Mode
+* Binary Mode
+
+Text Mode limits data transfer within the
+ASCII character set range of the system. 
+
+Binary Mode doesnt apply any limit on the 
+data transfer.
+
+3 Standard Streams
+----------------------
+The 3 standard streams that are automatically
+made available for use are :
+* Standard Input Stream
+* Standard Output Stream
+* Standard Error Stream
+
+Java references these stream through
+* System.in
+* System.out
+* System.err
+respectively.
+
+System.in is a reference of type InputStream.
+It is a binary stream.
+Primary operations (methods) it supports are :
+* int read()
+* int read(byte[])
+* long available()
+* skip(long)
+
+System.out is a reference of type PrintStream.
+It is a binary stream.
+Primary operations (methods) it supports are :
+* write(int)
+* write(byte[])
+* flush()
+* print() //overloaded for all primary types 
+* println() //overloaded for all primary types 
+* printf()
+
+System.err is a reference of type PrintStream.
+It is a binary stream.
+Primary operations (methods) it supports are :
+* write(int)
+* write(byte[])
+* flush()
+* print() //overloaded for all primary types 
+* println() //overloaded for all primary types 
+* printf()
+
+
+
+Details of methods of InputStream
+----------------------------------
+* int read()
+read fetches one byte of data from the source.
+It returns the ASCII value of the fetched byte.
+It returns -1 when it encounters end of the data at source.
+It blocks the program control if source is empty.
+It raises IOException if source becomes unreadable or closes abnormally.
+
+* int read(byte[])
+read fetches n bytes of data from the source. Where n is the smaller of : size of the array or bytes available at the source.
+It loads the ASCII values of the fetched data into the array and returns n.
+It returns -1 when it encounters end of the data at source.
+It blocks the program control if source is empty.
+It raises IOException if source becomes unreadable or closes abnormally.
+
+* long available()
+Returns the number of bytes available for access at the source.
+
+* skip(long)
+Moves the file read pointer ahead by n positions.
+
+
+Details of methods of PrintStream
+----------------------------------
+* write(int)
+Writes one byte of data to the target.
+The bytes ASCII value is written.
+
+* write(byte[])  and write(byte[], int, int)
+Writes n bytes of data to the target.
+Data to be written is fetched from the array.
+The startIndex and number of bytes to write can be optionally set.
+
+* flush()
+Ensures the written data is synced with the target.
+Buffers are emptied and target is written to.
+
+* print() 
+* println() 
+Data output methods.
+Overloaded to output data stored in primary 
+data types of Java and String.
+
+* printf()
+Similar to printf of C.
+Exception being it returns the caller object and not the number of characters outputted.

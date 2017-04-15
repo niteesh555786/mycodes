@@ -1,0 +1,82 @@
+Java allows declaration of :
+ Data members
+ Methods
+ Initializer Blocks
+ Nested Classes
+as "static".
+
+
+Data Members
+----------------
+Data members are variables, arrays, etc
+that belong to the class.
+Data members can be classified as :
+ * non static (default)
+ * static
+
+non static data member :
+ * Data members of the class are by default non static.
+ * non static data members are allocated as members inside every object of the class. 
+ * non static data members are accessible through object reference.
+ * life of non static data member is equal to the life of the object.
+
+static data member :
+ * Data members of the class can be made static.
+ * static data members are allocated once for the class and not as a member inside any object of the class. 
+ * static data members are accessible through class reference.
+ * life of static data member is equal to the life of the class.
+
+
+ Initializer Blocks
+------------------
+ Initializer blocks are blocks of code
+ that belong to the class.
+ They donot have any signature.
+ Their purpose is to initialize the data members of the class.
+ They may be classified as 
+ * non static initializer block
+ * static initializer block.
+
+ non static initializer block is used to
+ initialize the non static data members
+ of the class.
+ It is auto invoked per object created.
+
+ static initializer block is used to initialize
+ the static data members of the class.
+ It is auto invoked on class initialization.
+ 
+Methods
+=============
+Methods are operations (sub routines)
+that belong to the class.
+Methods can be declared as :
+1) non static (default)
+2) static
+
+non static methods
+----------------------
+* Methods of the class are by default
+non static.
+* A non static method requires a 
+caller object (of the same class) for 
+invokation.
+* It can access all other members
+of the class.
+
+
+static methods
+--------------------
+* Methods of the class can be declared
+as static.
+* A static method doesnt require a 
+caller object for invokation. It can
+be called using the class reference.
+* It can access only other static members
+of the class.
+
+================================
+static nested classes would be
+discussed in a separate text and
+example.
+================================

@@ -1,0 +1,59 @@
+Access Specifiers
+-----------------
+Access specifiers control the usability of members 
+of a class/interface.
+
+For an interface, Java supports only one type of 
+access specifier and it is public.
+
+For a class, Java supports 4 types of access specifiers :
+1) private
+2) no access specifier
+3) protected
+4) public
+
+private
+---------
+private access specifier limits the usage of the 
+member within the current class only.
+
+A private member is not accessible in
+* Other classes of same package
+* Other classes of other package
+
+No Access Specifier Set
+-------------------------
+When no access specifier is applied then the member 
+can be used within
+ * current class
+ * sub classess of same package
+ * non sub classes of same package
+
+Such members cannot be used in
+ * sub classes that belong to a different package
+ * non sub classes that belong to a different package 
+
+protected
+------------
+When protected access specifier is applied then 
+the member can be used within
+ * current class
+ * sub classess of same package
+ * non sub classes of same package
+ * sub classes that belong to a different package
+
+Such members cannot be used in
+ * non sub classes that belong to a different package 
+
+public
+---------
+When public access specifier is applied then the 
+member can be used every where without any 
+restriction.
+
+i.e. The member can be within
+ * current class
+ * sub classess of same package
+ * non sub classes of same package
+ * sub classes that belong to a different package
+ * non sub classes that belong to a different package 

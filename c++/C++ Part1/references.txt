@@ -1,0 +1,43 @@
+Reference
+---------------
+A reference is an alternate identifier
+for a variable or an object.
+
+System handles references through 
+additional symbol table entries that
+refer to the location of an existing
+variable or an object.
+
+A reference once set to refer to a
+variable or an object, cannot be made
+to refer to a different variable or
+object for its lifetime.
+
+C++ supports 3 types of references.
+1) Parameter Reference
+2) Stand Alone Reference
+3) Function Return Reference
+
+Parameter Reference
+----------------------
+A formal parameter of the function
+is declared as reference.
+Known that the formal parameter is
+initialized by the actual parameter.
+Hence the formal parameter reference
+gets set to refer to the memory of
+the actual parameter.
+
+Stand Alone Reference
+----------------------
+A local reference is declared and is
+made to refer to some variable or
+object.
+
+It must be initialized while declaration.
+Its limited usage is seen.
+
+Function Return Reference
+-------------------------
+Would be discussed in another example.
+

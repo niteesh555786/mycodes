@@ -1,0 +1,94 @@
+C++ is an Object Oriented Programming
+language.
+It is an extension to the C Programming language.
+
+
+Object Oriented Programming
+----------------------------
+OOP is an approach to application
+developement where following concepts 
+are applied.
+1) Encapsulation
+2) Polymorphism
+3) Inheritance
+4) Abstraction
+
+Encapsulation
+-------------
+Encapsulation is binding related 
+code and data into one unit.
+
+Considering an entity, one must 
+analyze its operations and characteristics.
+
+Next a unit (class) must be defined
+to enclose the operations (functions)
+and characteristics (data) of the
+entity.
+
+Example Considering : Mouse
+
+class Mouse
+{
+ positioner optical;
+ button arr[3];
+ wheel w; 
+
+ click(){} 
+ doubleClick(){}
+ scroll(){}
+ point(){}
+ dragAndDrop(){}
+}
+
+Polymorphism
+-------------
+Polymorphism is implementing an
+operation in multiple ways i.e. many
+ways to perform a task.
+
+Example :
+ payment(Cash) {.....}
+ payment(DebitCard) {.....}
+ payment(LoyaltyPoints) {.....}
+
+Inheritance
+------------
+Inheritance is defining new entities
+from existing entities.
+Its purpose is extending the operations
+and characteristics.
+
+Example :
+ JuiceBar
+ {
+   Fruits arr[];
+   Spice s;
+   
+   Cut() {...}
+   Clean() {...}
+   ExtractJuice(Grind) {....}
+   ExtractJuice(Squeeze) {.....}
+   Filter(){ .... }
+   AddSpice() {....}
+
+ }
+
+ MoctailBar inherits JuiceBar
+ {
+   Flavour arr[];
+   Mixing() {....}
+   AddFlavours() {...}
+ }
+
+Abstraction
+------------
+Abstraction is the art of exposing
+what an entity does and hiding how
+it was done.
+
+Flower f;
+f.spreadFragrance();
+
+It is hidden the flower generates
+fragrance.

@@ -1,0 +1,61 @@
+Stream
+--------
+A stream is a hardware independent
+entity used to transfer data between
+the application and the devices.
+
+Classification
+-----------------
+A stream may be classified as :
+* Unidirectional
+* Bidirectional
+
+A unidirectional stream transfers
+data in one direction.
+It may be an input or an output
+stream.
+
+A bidirectional stream transfers
+data in two directions.
+It is a i-o stream.
+
+
+Usage
+-------
+A stream is
+* Opened
+* Read/Written
+* Closed
+
+Standard Streams
+------------------
+OS manages 3 standard streams and
+makes them available to the active
+application.
+
+The streams are :
+
+1) Standard Input Stream
+The standard input stream is a 
+unidirectional input stream that
+connects the keyboard and the 
+application.
+A C program refers the standard 
+input stream as stdin.
+
+2) Standard Output Stream
+The standard output stream is a 
+unidirectional output stream that
+connects the application and the 
+monitor.
+A C program refers the standard 
+output stream as stdout.
+
+
+3) Standard Error Stream
+The standard error stream is a 
+unidirectional output stream that
+connects the application and the 
+monitor. 
+A C program refers the standard 
+error stream as stderr.

@@ -1,0 +1,96 @@
+What is Java?
+Java is an Object Oriented and
+a Platform Independent programming
+language.
+
+Object Oriented Programming
+----------------------------
+Object Oriented Programming is
+a programming paradigm in which'
+for application development following
+concepts are implemented.
+
+Encapsulation
+Polymorphism
+Inheritance
+Abstraction
+
+Encapsulation
+--------------
+Encapsulation is an OOP concept
+in which for an entity the operations
+(code) and the attributes (data)
+are enclosed in one unit.
+
+Polymorphism
+------------
+Polymorphism is an OOP concept
+in which for an operation multiple
+methods may be defined.
+
+Inheritance
+------------
+Inheritance is an OOP concept
+in which a new entity is derived
+from an existing entity.
+The derived entity :
+ 1) Gets code and data from existing entity.
+ 2) Hosts extended code and data.
+ 3) Is compatible with existing entity.
+
+Abstraction
+------------
+Abstraction is an OOP concept
+in which an entity exposes its
+operations but hides their implementations
+from the user.
+
+An alarm uses Time.
+It knows that Time updates
+but it is unaware of the logic
+how the Clock would calculate
+the pulse of a second. 
+
+
+Platform Independent
+---------------------
+A platform is an environment
+(hardware + software) that 
+allows execution of applications.
+
+Platform Dependence
+--------------------
+Application are developed using
+the Application API, which inturn
+relies on OS API.
+Hence on compilation the binary 
+executable file that gets generated 
+becomes OS compatible and specific.
+
+This is platform dependence. 
+
+Platform Independence
+--------------------
+Java applications are developed 
+using the Java Application API, 
+which inturn relies on JVM.
+
+Hence on compilation the binary 
+executable file that gets generated 
+becomes JVM compatible and specific.
+
+This is JVM dependence. 
+
+Oracle Corporation has developed
+JVM for all operating systems.
+
+A compiled Java binary executable
+file that is JVM compatible can
+be ported to any JVM.
+
+JVM would be responsible for
+making that file compatible to
+the underlying OS and getting
+it executed.
+
+This is platform independence.

@@ -1,0 +1,50 @@
+printf 
+-------
+* printf is a predefined function that comes
+from header file stdio.h
+* printf takes program data and outputs it
+into stdout.
+* stdout is a stream that connects a C program
+with the monitor.
+* So the data outputted by printf reaches
+the monitor.
+
+printf can output 3 types of data.
+------------------------------
+1) Data enclosed in double quotes.
+2) Data stored in variables.
+3) Cursor movement characters.
+
+
+To control cursor movement in the output
+screen, C provides special escape sequence
+characters that can be used along with
+functions like printf.
+
+Escape 
+Sequence 
+Character	s	Meaning
+----------      ------------
+\n                 Takes the cursor to the beginning of a new line  
+\t	        Takes the cursor to one tab position rightwards.
+\r                 Takes the cursor to the beginning of the current line	
+\b 	        Takes the cursor to one position left (back) current line		
+\a	        Play an alert (beep) sound.	
+\\                 print a \
+\"                 print "	
+\'                 print '
+
+Extra escape sequence character to output ASCII values : 0 to 7
+
+\0   NULL
+\1   ?
+\2   ?
+\3   ?
+\4   ?
+\5   ? 
+\6   ?
+\7   •
+
+
+
+

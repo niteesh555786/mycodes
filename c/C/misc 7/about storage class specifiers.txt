@@ -1,0 +1,57 @@
+Storage Class Specifiers
+-----------------------
+Memory blocks ( variables/arrays/pointers)
+obtained by declaration may be applied appropriate
+storage class specifiers.
+
+The Storage Class Specifiers control their 
+* Declaration in target segment of RAM
+* Life 
+
+C provides 4 Storage Class Specifiers :
+* auto
+* register
+* static
+* extern
+
+auto
+-----
+auto is the default storage class specifier for local 
+variables/... declarations.
+It makes the variable get placed in STACK segment 
+of RAM.
+It gets life and usability corresponding to the scope.
+
+register
+--------
+Storage class specifier "register" requests the system 
+to place the current local variable in "CPU Registers"
+instead of RAM.
+
+This is done to "optimize access".
+
+If system approves the request then the variable will 
+get place in the CPU Registers, otherwise it will become
+be applied storage class "auto".
+
+
+static
+------
+static storage class specifier can be applied to local/global 
+variables/... declarations.
+It makes the variable get placed in DATA segment of RAM.
+It gets life equal to life of program and usability corresponding 
+to the scope.
+Due to extended life it preserves
+data across calls to the same function.
+
+static variables are garbage free by default.
+static variables can be initialized by constants only.
+Formal parameters of a function cannot be declared as static.
+
+extern
+------
+Storage class specifier "extern"
+tells the system that the variable/array/function
+being declared is defined by some other module
+but will be used in this module.

@@ -1,0 +1,40 @@
+void
+-----
+void is a special primary datatype in C.
+It is used for 2 purposes :
+1) As a return type of functions.
+2) As a generic pointer.
+
+It is special because its variables/arrays
+cannot be declared.
+
+When void is used as a return type of 
+a function then it indicates that the 
+function will not return any value.
+
+When void is used as a pointer type
+then the pointer becomes a "generic pointer".
+
+Generic Pointer
+-------------
+A void pointer is a generic pointer.
+
+A generic pointer can be used to 
+refer to a variable/array/... of any
+datatype.
+
+Known that system uses datatype of
+a pointer for dereferencing and in
+pointer arithmetic.
+
+Also known that for the system size
+of void is zero or unknown.
+
+Hence a void pointer cannot be directly
+dereferenced or be used in pointer arithmetic.
+
+In order to dereference a void pointer
+or to use it in arithmetic, it must be
+type casted (converted) into an appropriate
+type.
+

@@ -1,0 +1,42 @@
+Object as parameter to function
+-----------------------------
+C++ allows passing and receiving objects
+as parameters to functions.
+
+1) PASS BY VALUE
+---------------------
+To pass an object as parameter, simply
+use the object name.
+To receive an object as parameter declare
+the formal parameter as an object.
+
+On call, the formal parameter object
+becomes a copy of the actual parameter
+object.
+i.e. by default the objects as parameters
+to functions, are passed by value.
+
+2) PASS BY ADDRESS
+-----------------------
+It is possible to pass address of an object 
+as parameter to a function.
+
+To receive addres of an object as parameter 
+declare the formal parameter as a pointer.
+
+On call, the formal parameter pointer gets
+initialized with the address of the object.
+Next the pointer can be dereferenced to 
+access members of the class. In such a case
+the caller object for the members would
+be the object, address of which is stored in
+the pointer.
+
+3) PASS BY REFERENCE
+----------------------
+See : OperatorOverloading.cpp
+
+STUDY
+references.txt 
+references.cpp
+references.png

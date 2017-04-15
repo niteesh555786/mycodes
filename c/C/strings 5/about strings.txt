@@ -1,0 +1,79 @@
+Strings
+--------
+A string is a collection of alphanumeric data.
+
+For string representation, C uses a 
+char array.
+For string processing, C provides
+numerous features and readymade
+functions.
+Most of them to come from the header
+file "string.h"
+
+Interpreting the statement
+------------------------
+    scanf("%s", str);
+
+Here scanf is used to fetch data
+from keyboard and put it into the
+string.
+
+Points to observe :
+1) String, being a char array, is scanned
+   in a single statement. 
+   This is possible because of the
+   format character %s, that is used
+   to scan/print strings.
+
+   Default use of %s doesnt limit the
+   number of characters being scanned
+   or printed. This may be harmfull in 
+   regards of memory management.
+   Hence ideally we opt for use as follows:
+      scanf("%19s", str);
+ 
+   The above statement will scan a
+   string of max 19 characters.
+
+2) Array name is passed as a parameter
+   to scanf.
+   Array name internally converts into
+   the base address of the array (&array[0]).
+   And on the other hand scanf also 
+   wants its parameter by reference.
+   Due to this scanf fills up the array
+   from its first element.
+
+   If we would have used scanf as follows
+      scanf("%s", &arr[3]);
+   then scanf would have filled up the array
+   from its fourth element.
+
+End of the String
+----------------
+The user is free to type 1 to many 
+characters as the value of the string.   
+As user given data is filled up in the
+string (char array), to mark its end
+scanf will insert a special null character
+'\0'.
+Before '\0' is the string value.
+'\0' is end of string marker.
+Beyond '\0' is garbage.
+
+String processing stops at the element
+that stores '\0'.
+
+Interpreting the statement
+------------------------
+    printf("%s", str);
+
+It is a statement, similar to the scanf 
+statement above.
+Following are the differences.
+1) The stream used is stdout rather
+rather than stdin.
+Hence string value moves from the
+program to the monitor.
+2) It is special case where printf
+receives its parameter by reference.

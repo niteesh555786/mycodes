@@ -1,0 +1,8 @@
+http://downloads.codelite.org/
+select the option
+  CodeLite 6.1 Installer for Windows 8, 7, Vista and XP (wxCrafter included) with MinGW TDM-GCC 4.8.1 included (Direct Link)
+
+I have tested it for step by step execution
+of C program.
+
+It works fine.

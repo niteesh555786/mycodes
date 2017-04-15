@@ -1,0 +1,174 @@
+Multi-threading
+---------------
+An application is divided into modules that represent
+its tasks and sub-tasks.
+Ideally an application is Single Threaded, so it
+performs the tasks and sub-tasks sequentially.
+
+If the tasks and sub-tasks of an application are 
+to be executed concurrently then the application 
+must be multi threaded.
+
+Implementing Multithreading
+-----------------------------
+Java supports developement of multi threaded 
+applications in 2 ways :
+
+1) By extending Thread class.
+2) By using Thread object and implementing Runnable interface.
+
+Extending Thread class
+------------------------
+1) Define a class that extends the Thread class.
+2) Every object of the sub class is a custom thread.
+3) Every custom thread is inactive by default. It must be activated once by calling start() on the object.
+4) On activation the custom thread begins concurrent execution of run().
+5) Being a sub class it has inherited a run() method from the super class Thread. The inherited run() has empty definition. Override it to assign sub tasks to be executed concurrently.
+6) run() defines the life cycle of thread. Once run() is complete thread goes into dead state and cannot be reactivated.
+
+Using Thread object and Implementing Runnable 
+-------------------------------------------
+1) Define a class that implements Runnable interface.
+2) Hence override the interface method "public void run()". It happens to be the threads life cycle method as well.
+3) Create a Thread object ( ideally as a data member)
+4) Activate the thread and let it execute the "run()" method concurrently.
+
+Daemon and Non Daemon Threads
+---------------------------------
+Java categorises threads as
+* Non Daemon (default)
+* Daemon  
+
+As mentioned the threads are non daemon by default.
+
+A non daemon thread (if not terminated due to any 
+exception) lives full life and executes all assigned tasks.
+
+A daemon thread (if not terminated due to any 
+exception) lives life and executes the assigned tasks
+as long as any non daemon thread is active.
+In case all non daemon threads of the applicaiton
+have terminated then the daemon thread cannot
+keep the JVM running and would terminate prematurely.
+
+Ideally daemon threads are used to perform 
+background operations. 
+
+Java provides setDaemon(boolean) to set a thread
+as daemon or back as non daemon.
+The method comes from Thread class.
+A threads daemon or non daemon state must be
+set before activation.
+
+
+Thread Join
+----------------
+A thread join causes suspension of a thread until
+the target thread, to which this thread has joined,
+completes.
+
+Example:
+An application has two threads, say A and B.
+Both are performing respective tasks concurrently.
+At a point thread A calls B.join()
+By this thread A suspends itself until thread B completes.
+As thread B completes, thread A auto resumes.
+In case thread B was already over and thread A
+called B.join(), so it wont suspend i.e. join would
+be uneffective.
+
+A thread that is suspended by join can be brought 
+out of join and resumed by :
+1) InterruptedException.
+Such an interrupt must be raised by some other thread.
+2) Timed join
+i.e. a call like : ThreadA.join(1000); //milli seconds
+
+FYI
+------
+Improper use of join may cause application deadlock.
+
+Critical Sections
+------------------
+Refer : Critical Sections.txt
+
+
+Thread Sleep
+---------------
+Thread Sleep ceases the execution of the 
+current thread for a specified time interval.
+
+The accuraccy of sleep depends on the systems 
+timers and schedulers.
+
+A thread that is in sleep can be prematurely
+brought out of sleep through an InterruptedException.
+
+============================================
+Thread Yield
+----------------
+Thread yield causes current thread to voluntarily 
+give up execution for current time quantum, 
+allowing other threads to use the CPU.
+
+It is an approach followed to apply co-operative 
+multitasking in Java.
+
+Thread.yield() method is used to request the
+system to yield (give up) execution time of this 
+thread so that next thread in queue gets execution.
+
+
+Thread Priority
+---------------
+Thread Priority decides which of the multiple 
+active threads would access a resource first.
+
+Java applies thread priorities in range 1 to 10.
+1 is the least priority.
+5 is the normal priority. (default)
+10 is the maximum priority. 
+
+Java allows setting a threads priority using the method :
+    setPriority(int)
+And getting a threads priority using the method :
+    int getPriority()
+
+FYI
+-----
+* Applying a priority beyond 1-10 would cause
+IllegalArgumentException
+
+* Changing a threads priority affects the behaviour 
+of the application.
+Because some threads would get more execution 
+and other would starve.
+
+Thread Interrupts
+-------------------
+Thread Interrupts are signals that are transmitted 
+across the threads of an application.
+
+In Java, thread interrupt :
+1) Brings a thread out of sleep.
+2) Brings a thread out of join.
+3) Brings a thread out of wait.
+4) Signal termination.
+
+For first three cases interrupt() causes an 
+exception in the target thread.
+
+For the fourth case interrupt() signals termination.
+
+The target thread must check for the reception 
+of the signal.
+For this purpose (to known that an interrupt is 
+signalled) the target thread uses :
+
+isInterrupted() on the Thread object
+  It returns true if an interrupt was sent, otherwise false.
+  It is not able to reset the signal hence a signal sent once would be shown up as received everytime.
+
+interrupted() on the Thread class
+  It returns true if an interrupt was sent, otherwise false.
+  It would reset the signal hence a signal sent once would be shown up as received one time only.

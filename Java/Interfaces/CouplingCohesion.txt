@@ -1,0 +1,99 @@
+Cohesion
+-----------
+Is the degree upto which members of a 
+single class are well bound towards their
+purpose.
+More related the members of the class are,
+more is the cohesiveness.
+
+Coupling 
+-----------
+Is the degree upto which a class knows 
+about another class.
+
+Two classes may be 
+1) Tightly Coupled
+In this case a class directly uses 
+reference to another class and 
+accesses many-all members of the 
+target class.
+
+Tight Coupling limits the class reference 
+to refer to one class only and hence 
+the current class becomes limited for the 
+definitions of the methods.
+
+2) Loosely Coupled
+In this case a class uses interface/super 
+class reference to refer to another class 
+and accesses limited members of the 
+target class.
+
+Loose Coupling allows the interface/super class
+reference to refer to any class in the hierarchy
+defined by the interface or the super class.
+
+Hence the current class can get different
+definitions for the same method.
+
+Implementation
+---------------
+An application is made up of multiple 
+classes / interfaces / ...
+
+For a task the classes need to interact 
+with one another.
+i.e. they invoke one anothers methods.
+
+Known that for calling a method an object 
+of respective class is required.
+The object can be :
+* Created
+* Obtained
+
+The way to adapt depends on
+the state of the object.
+
+If an object is created then 
+it is ideally for internal use 
+of an operation.
+
+If an object is obtained then 
+it is ideally for dependency
+injection into an operation.
+
+Dependency Injection is 
+obtaining an external resource
+for completion of a task.
+
+As an external resource (object)
+is obtained then it can be
+received in 2 ways :
+
+1) In a reference of its own type.
+2) In a reference of its super type.
+
+If received in a reference of its
+own type then the current operation
+can access all the methods of the
+injected object.
+
+If received in a reference of its
+super type then the current operation
+can access limited methods of the
+injected object.
+
+
+Area of Implementation
+----------------------
+
+There exists algorithms/logic that 
+can act on a hierarchy of classes.
+
+Ideally such algorithms have
+* common code that can act on entire hierarchy
+* utilize specific code that comes from a particular entity of the hierarchy.
+
+To implement such operations one must use :
+* Inhertiance : to form a hierarchy of classes
+* Loose Coupling : to be able to refer to any object from the hierarchy

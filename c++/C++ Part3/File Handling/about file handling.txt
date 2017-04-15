@@ -1,0 +1,92 @@
+File Handling
+ File Handling is performing read/write (i/o) 
+ operations with files that are stored on disk.
+
+To implement file handling 
+ 1) Open a file
+ 2) Transfer data
+ 3) Close the file
+
+Opening a file establishes a stream
+(channel of data transfer) between the
+file and the application.
+
+The stream may be :
+  Unidirectional
+  Bidirectional
+And it would acoordingly all transfer of
+data.
+
+The stream can be opened in 
+  Text Mode
+  Binary Mode
+
+When opened in text mode it limits transfer
+of data within the ASCII character range
+supported by the system. (Ideally 0-255).
+
+When opened in binary mode there is no limits 
+applied to the data that may be transferred.
+
+Transfer data
+----------------
+Data transfer meaning performing read or
+the write operation.
+Ideally an application supports reading writing
+ 1) bytes
+ 2) strings
+ 3) values stored in primary datatypes
+ 4) objects
+
+Closing the file deallocates the stream
+of data transfer that was established
+between the application and the file.
+After the file is close, all data transfer
+operations would cease.
+
+-------------------------------------
+C++ provides the header file "fstream"
+that contains classes, functions, constants
+used for performing file handling.
+
+To open a file 
+-----------------
+ 1) Create an object of 
+    ifstream  (when file is to be read)
+    ofstream (when file is to be written)
+    fstream (when file is to be read and written)
+ 2) Call the open function
+    To the open function provide 2 parameters
+    a) File Name
+    b) Open Mode (can take default value)
+ 3) Test open status
+
+
+Perform read/write
+-------------------
+  To read a byte  : get()
+   get() fetches one byte of data from the file.
+   It returns the ASCII value of the fetched byte.
+   It auto advances the read pointer poistion to the next byte.
+   It returns -1 (EOF) if the file read pointer is at end of the file.
+
+  To write a byte  : put()
+    put() write one byte of data to a file.
+    The data is written at the file write pointer position. 
+    File expands in size.
+
+  To write values stored in variables :
+    Use the insertion operator (<<) on file object 
+
+  To read variable values back :
+    Use the extraction operator (>>) on file object 
+
+  To write String /Object
+    write(startAddress, size);
+
+  To read String /Object
+    read(startAddress, size);
+
+To close the file
+------------------
+  Call the close() function on the ifstream or ofstream or the fstream object  

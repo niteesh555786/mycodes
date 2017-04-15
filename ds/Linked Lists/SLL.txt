@@ -1,0 +1,129 @@
+NODE
+--------
+A singly linked list node is a 
+composite type ideally made up 
+of two parts :
+1) Information
+2) Link
+
+Information stores the data.
+Link stores address of the next
+(following) node.
+
+SINGLY LINKED LIST
+---------------------
+A singly linked is a collection of
+nodes that are linearly linked.
+
+The list is identified by its first
+node called as head node.
+Every node knows about the next
+node.
+The last node stores NULL, which
+marks end of the list. It is termed
+as tail node.
+
+Creating a linked list 
+-------------------
+1) create a node
+2) initialize it
+3) connect it
+4) goto 1) or 5)
+5) return address of first node
+
+displaying a linked list
+-----------------------
+1) Set a pointer at head node of the list
+2) LOOP pointer != NULL
+ 2.1) print pointer->data
+ 2.2) Move (traverse) to the next node
+3) Exit
+
+Counting nodes in a linked list
+---------------------------
+1) Set a pointer at head node of the list
+2) Set a counter to ZERO
+3) LOOP pointer != NULL
+ 3.1) counter++
+ 3.2) Move (traverse) to the next node
+4) Return counter
+
+reverse display a linked list
+-----------------------
+1) Count the number of nodes in list
+2) Loop count times
+ 2.1) Set a pointer at head node of the list
+ 2.2) LOOP count -i times
+   2.2.1) Move (traverse) to the next node
+ 2.3) print node data
+3) Exit
+
+insert a node
+--------------
+1) Count the number of nodes in list
+2) Accept position of new node from the user
+3) Raise error if pos < 1 or is > total + 1
+4) On no error goto 5
+5) Create a new node
+6) Initialize the node (Scan n->data and set n->next = NULL)
+7) Connection
+ 7.1) As head node
+      newNode->next = head
+      head = newNode
+ 7.2) As successor node
+      set a shadow pointer at node : pos -1
+      set a pointer at node : pos
+      shadow->next = newNode
+      newNode->next = pointer
+
+
+delete a node
+--------------
+1) Count the number of nodes in list
+2) Accept position of node to be deleted from the user
+3) Raise error if pos < 1 or is > total 
+4) On no error goto 5
+5) Delete
+ 5.1) The head node
+      pointer = head
+      head = head->next
+      free(pointer)
+ 5.2) The successor node
+      set a shadow pointer at node : pos -1
+      set a pointer at node : pos
+      shadow->next = pointer->next
+      free(pointer)
+
+ReverseList
+--------
+1) Set a pointer P at head node of the list
+2) Set a pointer Q to NULL
+3) Set a pointer R to NULL
+4) LOOP P != NULL
+ 4.1) Set Q as shadow to P
+ 4.2) Move P (traverse) to the next node
+ 4.3) Reverse Q, make it point to R
+ 4.4) Let R = Q
+5) Return Q
+
+  
+Search
+--------
+1) Set a pointer at head node of the list
+2) LOOP pointer != NULL
+ 2.1) if pointer->data == VALUE
+  2.1.1) return pointer
+ 2.2) Move (traverse) to the next node
+3) Return NULL
+
+FreeList
+--------
+1) LOOP HEAD != NULL
+ 1.1) Pointer = HEAD
+ 1.2) Move HEAD (traverse) to the next node
+ 1.3) Free Pointer
+2) Return HEAD (NULL)
+
+
+
+    

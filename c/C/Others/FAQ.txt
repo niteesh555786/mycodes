@@ -1,0 +1,39 @@
+Q) What are the similarities between the array and the linked list?
+A) Both are sequentially arranged blocks of memory that store homogenous data.
+
+Q) Why linked lists instead of arrays?
+A) Arrays are system managed memory blocks.
+Their life is under systems control and their size is predecided.
+Where as linked lists are application managed memory blocks
+for which the life is under applications control and size can be dynamically decided.
+
+Q) Why is node termed as a "referential struct"?
+A) node is termed as a "referential struct" because 
+one of its member is a pointer of its own type.
+
+Q) When a linked list supports dynamic expansion and shrink of size, then why to use arrays ever?
+A) Because arrays support direct access of elements, so more efficient at execution level.
+
+Q) Why is a Stack termed as a LIFO data structure?
+A) A stack is a linear DS. 
+It has only one open end.
+The same is used for data 
+insertion and extraction.
+While insertion data is overlapped 
+one on another.
+So the value that is inserted 
+last appears to be at the top.
+While extraction data is taken 
+out in top to bottom order.
+Due to approach of data insertion
+and extraction it is termed as
+Last In First Out data structure.
+
+Q) Why to prefer a do-while loop for processing CLL?
+A) For a CLL the initialization and condition are same.
+So they contradict in case a for or a while loop is used.
+A do while allows one iteration and hence the reinitialization removes the contradication.
+
+Q) Why the node of a tree is initialized to store NULL in its pointers?
+A) Because as per the connection approach every new inserted node is a leaf.
+And for a leaf there are no childs, hence its pointers are set to NULL.

@@ -1,0 +1,25 @@
+A variable is :
+ * A reserved block of memory.
+ * It is identified by a unique name.
+ * It allows storage and retrieval of data.
+ * It can store a single value.
+ * Its value can change.
+
+To declare a variable 
+--------------------
+Datatype variableName;
+
+To assign a value to it 
+---------------------
+Use = operator or scanf like functions
+to assign a value to a variable
+
+To print it
+-----------
+Use printf like function to print the data
+stored in a variable.
+printf requires specification of output
+format to print the value of a variable.
+So one must use the format characters
+in printf.
+

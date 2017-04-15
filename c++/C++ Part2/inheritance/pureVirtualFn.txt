@@ -1,0 +1,33 @@
+There are algorithms that act on a hierarchy
+of classes.
+
+Examples :
+ Zoo
+  feed(Animal * p) { .... }
+ Painter
+  quote(Shape * p) { .... }
+ ...
+
+Such methods host partial code that is
+common and require invokation of some 
+code that is specific to the classes in hierarchy.
+
+For being able to refer to objects of all
+classes in the hierarchy, such methods use
+a base class pointer.
+
+For being able to invoke class specific code
+they want the classes to override the invoked
+function and provide specific code there.
+
+In case the overridden function can be
+defined in the base class then it is made.
+
+But in case the overridden function cannot
+be defined in the base class then it is
+made as a pure virtual function.
+
+A pure virtual function indicates a projected
+valid operation of the base class that can only 
+be defined by the derived classes as per
+their characteristics.

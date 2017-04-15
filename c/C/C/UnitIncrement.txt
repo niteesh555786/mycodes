@@ -1,0 +1,43 @@
+Study of Operator : ++
+----------------------
+++ is a unary operator.
+It is a unit increment operator.
+It increments the value of operand by 1.
+
+It can be applied in 2 forms:
+1) Prefix form : ++Operand
+2) Postfix form : Operand++
+
+In both the cases it has the same affect
+on the operand.
+i.e. it increments the value of operand by 1.
+
+But the two usages differ in priority.
+Prefix use gets a higher priority.
+Postfix use gets a lower priority.
+
+Tip:
+op++ expands as : op = op +1
+Here op must be a variable.
+If op is a constant then assignment will fail.
+
+Examples :
+int a = 10;
+a++ 
+expands as
+a = a +1
+a = 10 +1
+a = 11
+
+10++
+expands as :
+10 = 10 +1
+10 = 11
+assignment not supported
+hence use of ++ on constants is not supported.
+
+Tip : 
+As C supports operator ++ for unit increment
+so C supports operator -- for unit decrement.
+
+

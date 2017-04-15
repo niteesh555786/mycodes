@@ -1,0 +1,109 @@
+What is the difference between a
+struct and a class ?
+A struct, in C, is a group of member
+variables only.
+A class, in C++, is a group of member
+functions and member variables.
+A struct, in C++, is a group of member
+functions and member variables.
+
+The difference between a struct and
+a class, in C++, is that for a struct
+the members are public by default
+where as for a class they are private.
+
+How to use a class?
+A class is used through :
+ 1) Its objects.
+ 2) Its static members.
+ 3) Inheritance.
+
+How an object works ?
+Known that an object stores and processes
+data.
+It stores data in member variables.
+It processes using the member functions.
+The two are accessible only through an object.
+Syntax to access :
+  object.memberVariable
+  object.memberFunction()
+
+What is shadowing?
+Shadowing is the mapping usage of a 
+name with definition of a local variable 
+instead of the member variable.
+It occurs because the local variable takes
+the same name as of the member variable.
+
+Shadowing can be overcome :
+ 1) by using different names
+ 2) by explicit application of this pointer
+
+Why does a class need a constructor?
+If a class defines a constructor, then 
+it is auto invoked by the system as 
+object of the class is created.
+Its code initializes the object to a 
+default or a specific value. 
+
+i.e. A constructor is an intializer for 
+the objects of the class.
+
+Q) What is a default constructor?
+A) Default constructor is a the parameterless
+constructor of the class.
+It takes no input while object creation.
+It uses preset data (default data) to
+initialize the members of the object.
+
+If for a class there is no constructor
+defined then C++ system would auto 
+define a default constructor that is
+public and is with empty body.
+Because by this object creation process
+is completed.
+
+Q) What is destructor overloading?
+A) There is no such concept.
+Because a destructor is always parameterless
+and cannot be overloaded.
+
+Q) Does system auto provide a destructor for a class?
+A) Yes, if for a class no destructor is defined.
+System provided destructor would be public and
+with empty body.
+
+Q) Can a non member function create object of a class?
+A) Yes, if the constructor, that gets invoked, is public. 
+
+Q) If only post increment operator is to be
+overloaded still is it necessary to provide an
+int as a formal parameter?
+A) Yes, because the updated signature is
+a compiler fix.
+On call compiler would append an int value as
+actual parameter, which the function must
+receive in the formal parameter.
+
+Q) Why would the default constructor of
+the base class execute everytime the object
+of derived class is created?
+A) Because for every constructor of the
+derived class, the compiler appends a call
+to the default constructor of the base class.
+
+Example :
+ class Derived
+ {
+   ...
+   Derived() : Base()
+   { ... }
+   Derived(params) : Base()
+   { ... }
+
+Q) What is the difference between function
+overloading and template (generic) function?
+A) Function overloading is about performing a
+task in multiple ways.
+Generic function is about having common process 
+to handle multiple datatypes.

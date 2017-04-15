@@ -1,0 +1,13 @@
+main
+-----
+A C program must define a function
+named as "main".
+
+It makes the program executable.
+
+System begins the execution of a 
+C program with main and ends with 
+end of main.
+
+Hence said main defines the life
+of a C program.

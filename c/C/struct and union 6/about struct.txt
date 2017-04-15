@@ -1,0 +1,97 @@
+struct
+------
+A struct is combination of heterogenous data.
+It is used to define custom secondary 
+datatype in C.
+
+Example:
+A combination of :
+  Name
+  Address
+  Phone Number
+  Image
+  Blood Group
+  College Name
+forms an composite secondary datatype
+termed as "ICard".
+
+Use of Secondary Datatype
+------------------------
+Being a datatype, it can be used for
+ Variable declaration
+ Array declaration
+ Pointer declaration
+ Return type of functions. 
+
+Memory Allocation For a Variable of
+Secondary Type, Formed Using a struct
+-----------------------------------
+Variable of a secondary type formed
+using a struct, is a composite block
+of memory formed by the combination
+of members used to define the secondary 
+type.
+
+Its size will be the sum of sizes of
+its members.
+
+It can store everything that its members
+can store.
+
+It can be applied :
+1) Dot operator for member access.
+2) = for copy
+3) & for referencing
+4) sizeof for size calculation
+
+Rest operations on a variable of secondary
+type need to be applied on its members.
+
+
+Array of Secondary Type, formed using a struct
+------------------------------------------
+C allows declaration and use of arrays
+of secondary datatypes formed using
+struct.
+
+These arrays are all similar to the
+arrays of primary datatypes.
+
+Only difference is in their datatype
+due to which the array elements of
+a struct type are composite units
+of memory.
+
+See : structArray.png
+Refer : structArray.c
+
+
+Passing Variable of Secondary Type, formed using a struct as Parameter to Function 
+-----------------------------------------------------------------------
+When a variable of Secondary Type, 
+formed using a struct as is passed 
+as a parameter to a function then it
+is passed by value.
+
+Pointers of Secondary Types formed using struct
+--------------------------------------------
+C allows declaration and use of pointers
+of secondary datatypes formed using
+struct.
+
+These pointers are all similar to the
+pointers of primary datatypes.
+
+Only difference is in their way of
+dereferencing.
+
+See : structPtr.png
+Refer : structPtr.c, structFnPassByRef.c
+
+Nested struct
+--------------
+C allows declaration of a struct variable
+as a member of another struct.
+Do so is nesting of struct.
+
+Refer : nestedStruct.png

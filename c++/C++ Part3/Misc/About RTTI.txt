@@ -1,0 +1,32 @@
+RTTI
+=========
+
+C++ implements runtime polymorphism 
+through the use of class hierarchies, 
+virtual functions, and base-class pointers. 
+
+RTTI (Run-time type identification)
+is a mechanism used to determine,
+at run time, the type of object being
+referred by a base class reference
+or pointer:
+
+Its most commonly used form is :
+typeid(object)
+
+Here, object is the object whose type 
+is to be obtained. It may be of any type,
+including the built-in types and class type.
+
+typeid returns an object of type type_info 
+that describes the type of object.
+
+The type_info class defines the following members:
+ bool operator == (const type_info &ob);
+ bool operator != (const type_info &ob);
+ const char *name( );
+
+The overloaded == and !=  for the 
+comparison of types. 
+The name( ) function returns the name 
+of the type.

@@ -1,0 +1,79 @@
+Encapsulation
+is an OOP concept in which for an entity 
+the operations (code) and attributes (data) 
+are bound into one unit.
+
+Encapsulation OOPwise 
+   ENTITY{ operations , attributes}
+Encapsulation Javawise 
+   CLASS{ methods, variables}
+
+i.e. to implement encapsulation in Java 
+one builds a class with methods and 
+data members.
+
+Once a class is defined, Java treates it 
+as a user defined secondary datatype.
+
+How to use a class?
+A class being a datatype is used by instantiation.
+To instantiate a class in Java :
+  className refName = new className();
+
+Object
+--------
+Object is an instance of a class.
+i.e. its datatype is some class.
+
+It can store and process data.
+
+For object creation and allocation
+refer : EncapsulationClassObjectThis.png
+
+Q) What is the storage capacity of an object?
+A) The storage ability of an object is defined
+by the data members of the class which the
+object is an instance of.
+
+Q) What is the processing capacity of an object?
+A) The processing ability of an object is defined
+by the methods of the class which the
+object is an instance of.
+
+Use of an object
+------------------
+An object is used to :
+ * Store data in the members varaibles it is formed of.
+ * Invoke member functions which its class defines.
+
+Q) Explain method invokation process?
+A) In Java methods belong to a class 
+and require an object for invokation.
+The object used to invoke the method
+is termed as the "caller object".
+
+For a method call, system internally
+automatically passes the reference to 
+the caller object as a hidden parameter.
+
+Even the system would internally 
+automatically receive the reference to 
+the caller object in a reference named
+as "this".
+
+i.e.
+"this" is a system defined formal parameter
+for methods of the class.
+It is auto initialized to refer to the caller 
+object of the method.
+
+Finally system internally automatically
+uses "this" to identify the members 
+inside the method.
+
+Q)  Explain this
+A) this is a system defined formal parameter for non static methods of the class.
+this is a reference of type current class.
+this receives the reference to the caller object of the method.
+Through this the method processes the object.
+this is a final (constant) reference, it cannot be modified. 

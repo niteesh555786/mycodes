@@ -1,0 +1,70 @@
+Generic Functions
+===================
+Generic functions are functions that, using 
+a common logic (code), can process data of 
+multiple types (primary and secondary).
+
+Example :
+-----------
+ swap()
+ {
+    temp = a;
+    a = b;
+    b = temp;
+ }
+swap method can be defined as a generic function, 
+so that it can interchange data of multiple types.
+
+Syntax :
+--------
+ template<class X> returnType fnName(X parameters)
+ {
+   process 
+ }
+
+As shown in the syntax, X is declared as
+a generic type, capable of representing any
+primary or secondary datatype.
+
+How it works?
+--------------
+Generic functions implementation is a compiler
+level support.
+Compiler would identify all calls to the generic 
+function. 
+Next it would identify the datatypes used in 
+the various calls.
+For each datatype it would define a generated
+function, by refering the generic function.
+Finally it would map the calls to the generic
+functions with the generated functions as per
+the datatypes used in the calls.
+
+Overloading Generic functions
+----------------------------
+Generic functions can be overloaded
+using generic as well as as non generic
+(normal) functions.
+
+Example :
+template <class X> void fx(X ref)
+{}
+template <class X> void fx(X ref1, X ref2)
+{}
+void fx(int ref)
+{}
+
+If for a generic function a non generic
+overload is provided then for calls to the
+function that match with non generic
+version, generated functions are not defined
+and mapping is done with non generic overload.
+
+Generic Class
+--------------
+A generic class forms a generic secondary 
+datatype by grouping generic code and 
+generic or non generic data into one unit.
+
+Objects of a generic class can store and
+process data of multiple different types.

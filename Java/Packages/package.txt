@@ -1,0 +1,26 @@
+Package
+--------
+A package is a collection of classes, interfaces 
+and nested packages.
+
+It defines an application (Project) or a libarary (API).
+
+To make a package :
+* Make a directory of the same name as of the package.
+
+To add classes, interfaces, ... in a package :
+* Define them with package statement as their first statement.
+* Save them in the package directory.
+(If the class, ... is public then it must be saved in a file that takes the same name as of the class, ...)
+
+To use a package :
+* Its parent directory location must be set in CLASSPATH.
+* It must be imported.
+* Its public classes, enumerations and interfaces can be used.
+
+FYI
+-----
+If a java class is not put in any package 
+then the system considers it to be in a 
+no-name package that spans the current 
+directory.

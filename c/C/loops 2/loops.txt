@@ -1,0 +1,119 @@
+Preface
+--------
+System executes one statement
+once. But there are cases when
+a statement or a set of statement
+need to be executed multiple times.
+
+Examples:
+* Time update statement for a clock.
+* Periodic change of traffic signal lights.
+
+In such cases a programmer
+designs loops.
+
+Loops
+------
+Loops are mechanisms used to
+repeat a set of statements
+multiple times.
+Loops are governed by a condition.
+System repeats the statements
+inside the loop as long as the
+governing condition remains true.
+
+Loops in C
+-----------
+C supports three types of loops :
+1) while
+2) for
+3) do while
+
+while and for loop can be used
+interchangeably because they
+check the condition first and
+then allow program control to
+execute the loop statements.
+Resulting in ZERO-MANY
+executions of loop statements.
+
+do while loop allows the program 
+control to execute the loop statements
+first and checks the condition next.
+Resulting in ONE-MANY
+executions of loop statements.
+
+Loop related terms
+-----------------
+
+Initialization
+------------
+Initialization is assigning a
+start value to the loop controlling
+variable.
+
+Condition
+----------
+Condition is comparison of 
+current value of loop controlling
+variable with its stop value. 
+It decides whether the loop
+must cycle or stop.
+
+Reinitialization
+--------------
+Reinitialization is change in 
+value of loop controlling variable.
+It must be of the nature by
+which the value goes near to
+the stop value.
+
+Iteration
+---------
+Iteration is one execution of
+the statements in loop body.
+It is also known as a "cycle".
+
+
+Steps to design a loop
+--------------------
+1) Identify the code to be repeated.
+2) For the loop design think and finalize
+   initialization, condition and reinitialization.
+3) Code it.
+
+
+Syntax
+-------
+
+while loop
+----------
+initialization
+while(condition)
+{
+  statements to repeat
+  reinitialization
+}
+
+
+for loop
+----------- 
+     1              2,5,8      4,7
+for(initialization; condition; reinitialization)
+{//on true of condition
+  3,6
+  statements to repeat
+}
+on false : 9
+
+
+do while loop
+-------------
+initialization
+do
+{
+  statements to repeat
+  reinitialization
+}while(condition);
+
+

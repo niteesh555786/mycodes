@@ -1,0 +1,13 @@
+friend functions
+-----------------
+A friend function is a non member function
+that it is granted access of private and
+protected members of the class or a struct, 
+using a respective object.
+
+public member being already accessible.
+
+FYI:
+Using friend violates OOP concept of 
+abstraction, makes the application not a
+pure object oriented one.

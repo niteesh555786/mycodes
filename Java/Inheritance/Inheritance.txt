@@ -1,0 +1,150 @@
+Inheritance
+------------
+Inheritance is an OOP concept that
+allows an application to create
+derived classes from existing classes.
+
+The existing classes are termed as
+super classes.
+The derived classes are termed as
+sub classes.
+
+By inheritance the sub class gets:
+1) CODE
+2) DATA
+3) COMPATIBILITY 
+from the super class.
+The sub class hosts extended code
+and data.
+
+"extends" keyword is used to apply
+inheritance in Java.
+
+It takes the following syntax :
+
+DerivedClass extends ExistingClass
+{
+  extended code and data
+} 
+
+
+Method Overriding 
+------------------
+Method Overriding is redefining
+a non static inherited method in 
+the sub class, keeping the methods
+signature same.
+
+Type Compatibility
+------------------
+Inheritance creates Type Compatibility
+between the super and the sub class.
+
+Type Compatibility allows a super class
+reference to refer to object of the sub
+class.
+(Reverse is not true).
+
+Using a super class reference that
+refers to object of the sub class,
+only the inherited and overridden code
+is accessible.
+The extended code defined by the 
+sub class is not accessible.
+
+Binding
+--------
+Binding is connecting a method call
+with a methods definition.
+Binding is the role of the compiler.
+For binding compiler uses the signature
+matching technique.
+The name and the parameters used
+in the call are matched with the name
+and parameters used in the definition.
+
+If a match is found then binding is done
+otherwise a compile time error would be 
+raised.
+
+The process is termed as compile time binding.
+
+Runtime Binding
+-----------------
+When an overridden method is invoked
+using a super class reference then the
+compilers signature matching technique
+fails to bind.
+
+Reason 1) Type of object may change hence
+which method dispatch table to use is not clear.
+Reason 2) Multiple definitions (with the same signature) 
+of the overridden method are available.
+
+At execution time system encounters an unbound
+method call.
+So for binding it:
+1) Activates RTTI mechanism on the reference.
+This detects the type of object used to call the method.
+This helps decide the method dispatch table.
+2) Refering the correct method dispatch table
+and by matching the signature, system would bind the
+call with a definition and invoke the definition.
+
+This process is termed as dynamic method dispatch
+or runtime binding or late binding.
+This process is applied per call to the method.   
+
+Inheritance of DATA
+----------------------
+By inheritance the sub class gets DATA
+from the super class.
+This data is the set of non static member 
+variables declared by the super class.
+
+System implements inheritance of DATA
+as object of the sub class is created.
+
+Known that object creation is a 3 step process.
+1) Memory Allocation
+2) Execution of non static initializer block.
+3) Execution of constructor.
+
+As the object of the sub class is created 
+a composite block of memory is allocated.
+It contains all the non static data members 
+of the super and the sub class.
+
+As the object of the sub class is created 
+system executes the non static intitializer 
+block and the constructor of the super class.
+
+They must initialize the super class data members.
+
+Next the system executes the non static 
+intitializer block and the constructor of the 
+sub class.
+
+They must initialize the sub class data members.
+
+
+Constructors on creation of sub class objects
+------------------------------------------
+On creation of a sub class object a composite block 
+of memory is allocated. It contains data members
+of the super and the sub class.
+
+To initialize it the constructors of super and 
+sub class get executed in the order super
+class constructor first and the sub class 
+constructor next.
+
+By default the parameter matching constructor 
+of the sub class and the default constructor 
+of the super class would execute.
+
+To make the system execute the parameter 
+matching constructor of the super class, the 
+sub class constructor must pass parameters
+using the "super" as the first statement.
+(See the code).

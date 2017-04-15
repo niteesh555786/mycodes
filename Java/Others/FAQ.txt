@@ -1,0 +1,28 @@
+Q) What is a platform?
+A) A platform is an environment
+(hardware and software combinition)
+that allows execution of applicaitons.
+
+Q) Java has new operator for memory
+allocation, what about memory deallocation?
+A) Java allocates objects and array in
+heap segment of RAM.
+They are identified and used through references.
+When reference to an object or an array
+gets dropped, the referred array or the
+object becomes unreferenced.
+Java runtime environment uses a parallel
+running high priority thread named as 
+"finalizer" that 
+1) scans the heap segment for detecting 
+unreferenced objects.
+2) auto deallocates them.
+The process is termed as "Garbage Collection".
+
+So for memory deallocation Java uses the
+garbage collection mechanism.
+
+Q) Can methods have the same name as of the class?
+A) Yes. System doesnt conflict then with a constructor
+because a method has return type specification in its
+signature whereas constructor doesnt has one.

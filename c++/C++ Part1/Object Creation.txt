@@ -1,0 +1,36 @@
+In C++, object can be created in 2 ways :
+1) Declaration Method
+2) Allocation Method
+
+Declaration Method 
+------------------
+Object is declared to be an instance of a class.
+It follows a syntax similar to variable declaration.
+i.e.
+ DataType entityName;
+Example :
+ Person p;
+ Myclass m;
+
+Such objects are either global or local.
+There life and scope is controlled by 
+the system.
+As their life gets over they get auto destructed.
+
+Allocation Method
+------------------
+Allocation method allows dynamic object creation 
+(creation of object at program runtime) 
+using "operator new". 
+ 
+Such objects get allocated in "heap segment" of RAM. 
+ 
+They are accessible through a pointer only. 
+ 
+They have customized life 
+ * Either until program is running
+ * Until explicit deletion  
+ 
+A dynamically created object must  be deallocated  
+using the "operator delete".
+

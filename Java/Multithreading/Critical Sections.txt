@@ -1,0 +1,46 @@
+Shared Resource
+-----------------
+An object or a device may be used (accessed)
+by multiple processes or threads. Such an object
+or device is termed as "Shared Resource".
+
+It may or may not support concurrent use.
+
+If a shared resources is concurrently accessed 
+by multiple threads/processes but it doesnt support 
+concurrency then all modules that access it must
+be declared as "Critical Sections".
+
+
+Ciritcal Section
+-----------------
+Critical sections are code modules that access
+a shared resource which doesnt support concurrency.
+For a critical section, concurrency is blocked
+using a mutex or a semaphore.
+
+
+Implementing Critical Sections In Java
+------------------------------------
+In Java, every class is a sub class of Object
+i.e. every class extends Object directly or indirectly
+(This is done through compile time code generation).
+
+The Object class defines a monitor as a member.
+Due to default inheritance every class gets that
+monitor from the Object.
+
+The monitor is a binary semphore.
+It has the ability to block concurrency.
+i.e. It allows only one thread to enter a critical
+section and own it.
+Other threads that try to access the critical section
+using the same caller object get suspended.
+They resume sequentially prioritywise as the
+owner thread comes out of the critical section.
+
+But the monitor is inactive by default.
+Hence it doesnt block concurrency by default.
+
+It gets activated for blocks of code or for 
+methods that are declared as "synchronized".

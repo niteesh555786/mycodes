@@ -1,0 +1,111 @@
+Interface
+-----------
+An interface is a collection of 
+ * abstract methods
+ * default methods
+ * static methods
+ * final variables
+ * nested classes
+ * nested interfaces
+
+An interface forms a custom 
+secondary reference type in Java.
+
+Being a reference type, its references
+can be created but it cannot be
+instantiated.
+
+abstract methods of an interface
+---------------------------------
+Methods of an interface are by
+default abstract.
+They have signature only and no
+body (definition).
+They must be overridden by the
+implementing class.
+
+
+default methods of an interface
+-----------------------------
+default methods of an interface
+are well defined non static methods. 
+
+They provide a standard yet overridable
+definition of an operation.
+
+static methods of an interface
+-----------------------------
+static methods of an interface
+are well defined methods. 
+
+They provide a standard definition 
+of an operation.
+
+Being static they cannot be overridden
+and the implementing class must use
+the method as it is.
+
+(Recollect that static methods cannot be overridden 
+as they dont require a caller object for invokation).
+
+final variables of an interface
+----------------------------
+final variables are data members
+that can be assigned only once and
+next can be used as read only.
+
+nested classes
+----------------
+Would be covered in a separate example.
+
+nested interfaces
+----------------
+Would be covered in a separate example.
+
+Access Specifiers for interfaces
+------------------------------
+All the members of an interface
+are public by default.
+private and protected access specifiers
+are not allowed in an interface.
+
+Inheritance of interfaces
+------------------------
+An interface may inherit ONE to MANY 
+other unique interfaces.
+
+An interface cannot inherit any class.
+
+To apply inheritance, the sub interface 
+uses the "extends" keyword followed by 
+the list of super interfaces.
+
+By inheritance the sub interfaces
+get code, data and compatibility from
+the super interfaces.
+
+
+Implementation
+----------------
+Interface being a reference type
+cannot be directly used.
+(Except invokation of static methods).
+
+For use, a class that implements 
+an interface, must be defined.
+
+When a class implements an interface then
+1) It takes the responsibility to override all the abstract methods of the interface.
+2) It can optionally override the default methods of the interface.
+3) It becomes type compatible with the implemented interface.
+i.e. the interface reference can refer to an object of implementing class.
+And in such a case the reference is limited to access only those methods 
+that originate from its interface type.
+
+
+Usage
+--------
+Interfaces are widely used to create type compatibility
+and hence to implement loose coupling between classes of
+an application.
+

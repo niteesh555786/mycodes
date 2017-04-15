@@ -1,0 +1,15 @@
+Singleton Class
+---------------
+A singleton class is a class that can be
+instantiated only once.
+Ideally a class that controls a resource
+is made singleton.
+
+Steps to make a class Singleton are :
+----------------------------------
+1) Hide all of its constructors so that the 
+normal approach of object creation is blocked.
+
+2) Define a static method that would create 
+one object of the class and return the same 
+everytime.

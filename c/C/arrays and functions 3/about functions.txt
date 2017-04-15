@@ -1,0 +1,127 @@
+Program
+--------
+A program is a software module
+that implements a task.
+It is a logical collection of sub-tasks,
+that are implemented as functions.
+
+Function
+---------
+A function is a block of instructions.
+It implements a sub-task of a program.
+
+Syntax
+-------
+A function is made up of 2 parts:
+1) Signature
+2) Body 
+
+Signature of the function is
+made up of 3 parts :
+a) Return Type
+b) Function Name
+c) Parameters (Optional)
+
+Body of a function contains 
+the implementation of logic
+to perform the sub task.
+
+Execution
+---------
+The term function means an 
+executable module.
+The function executes only when
+it is called.
+
+As a function is called then
+program control gets transferred
+from the point of call to the
+definition of the function.
+
+Next the code of the called
+function executes.
+
+Finally on completion of the
+called function, the program 
+control returns to the statement
+following the call.
+
+Parameters
+-----------
+Local variables of a function 
+can by default be used in the 
+function itself and not in other
+functions of the program.
+
+If variables of a function are
+to used in other functions then
+they must be passed as "parameters".
+
+Parameters are values that are
+passed, along with the function
+call, from the caller function
+to the called function.
+
+Parameters are classified as:
+1) Actual Parameters
+2) Formal Parameters
+
+Actual parameters are values
+that are passed by the caller
+function.
+
+Formal parameters are values
+that are received by the called
+function.
+
+Actual and Formal Parameter
+for a function must match in
+* count
+* datatype
+* sequence
+
+Pass By Value
+-------------
+Pass By Value is a notification
+to the system to create formal 
+parameter as a copy of the 
+actual parameter.
+
+Hence on reading formal parameter
+reflects the same value of the 
+actual parameter.
+
+But if modified then only the
+formal parameter changes, and 
+the changes doesnt affect the 
+actual parameter.
+
+
+Pass By Reference
+-----------------
+Pass By Reference is a notification
+to the system to create formal 
+parameter as a reference to the
+memory of the actual parameter.
+
+Hence on reading/writing the
+formal parameter uses the same 
+memory as of the actual parameter.
+
+return
+-------
+return statement is used in function 
+1) To terminate the current function 
+2) Transfer back the program control to the place of call.
+3) Optionally carry one value alongwith.
+
+Return Type
+--------------
+Return Type is the specification of
+the datatype of the variable being
+returned.
+It is the first part in a functions signature.
+
+If a function is not returning any
+value then its return type must be
+set as "void".

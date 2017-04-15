@@ -1,0 +1,26 @@
+A stack is a linear data structure.
+Being linear it stores data in a
+sequential pattern.
+It has one open end termed as "top".
+All data enters/exits the Stack from
+the top.
+The data that enters it is stored in
+an overlapped manner.
+While extraction data is removed
+from the stack in top to bottom
+order.
+Hence develops a Last In and 
+First Out data movement order.
+
+
+Operations on Stack:
+
+* init : To clear the garbaage of the Stack and to set it to a initial state.
+* push : To add one value at the top of the Stack. Operation may raise overflow error.
+* pop : To remove one value from the top of the Stack. Operation may raise underflow error.
+* peek : To fetch the topmost value of the Stack. Value is not removed, its only viewed.
+* isEmpty : A check for empty state of the Stack.
+* isFull : A check for full state of the Stack.
+
+(For practice students often define a display operation.)
+

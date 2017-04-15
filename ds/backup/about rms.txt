@@ -1,0 +1,11 @@
+Record Management System
+is a program that treats a file 
+like a series of records.
+
+It allows the user to :
+add, modify, delete, view and search 
+records.
+
+It converts the record into an object
+and uses a file for storing and fetching
+it back.

@@ -1,0 +1,39 @@
+A stream is a hardware independent
+entity used for transfer of information
+between devices.
+
+A stream may be unidirectional or
+bidirectional and accordingly it will
+allow transfer of information.
+
+A stream must be :
+ * Opened
+ * Read / Written
+ * Closed
+
+3 streams are auto managed by the
+system.
+stdin : A channel of communication between the keyboard and the application.
+stdout : A channel of communication between the application and the monitor.
+stderr : A channel of communication between the application and the monitor.
+
+To utilize these stream, C++ system
+provides perdefined objects : 
+ "cin" for stdin
+ "cout" for stdout
+ "cerr" for stderr
+ 
+cin uses the extraction operator (>>)
+to take data from the keyboard and
+transfer it to the application through
+stdin.
+
+cout uses the insertion operator (<<)
+to take data from the application and
+transfer it to the monitor through
+stdout.
+
+cerr uses the insertion operator (<<)
+to take data from the application and
+transfer it to the monitor through
+stdout.

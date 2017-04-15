@@ -1,0 +1,67 @@
+What is a computer?
+--------------------
+A computer is a device that can execute programs.
+
+What is a program?
+-------------------
+A program is a software entity 
+designed to accompalish a task.
+It is made up of:
+1) Code
+2) Data
+
+Code
+-----
+Code means instructions.
+Code must be enclosed in functions.
+
+Functions
+----------
+A function
+1) Is a set of instructions.
+2) Is identified by a unique name.
+3) It performs a sub-task for the program.
+4) It executes, on call (invokation).
+
+Functions are of 2 types.
+* Predefined
+* Userdefined
+
+Predefined functions 
+ Are ready to use functions.
+ They accompalish some general task.
+ They are available through header files.
+
+Userdefined functions 
+ Are defined and then used.
+ They accompalish some particular task.
+
+
+Header File
+-------------
+A header file is a collection of
+predefined functions.
+It is can be included in a C program
+after which the program may readily
+use one to many of its functions.
+
+
+Data
+------
+Data means the information.
+Data can be classified as :
+1) Input : Input is the information that a program gets.
+2) Output : Output is the information that a program generates.
+
+Data must be stored in variables.
+
+Variable
+---------
+A variable 
+1) Is a reserved block of memory (RAM).
+2) Is identified by a unique name.
+3) Allows storage and retrieval of data.
+4) Can store a single value at a time.
+5) Can change.
+
+

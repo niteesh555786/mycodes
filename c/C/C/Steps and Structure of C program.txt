@@ -1,0 +1,33 @@
+Steps to make a C program
+---------------------------
+* Include header file(s)
+* Define main 
+* Define utility functions
+* Invoke utility functions and predefined function in proper sequence.
+
+Structure of a C program
+---------------------------
+#include<headerFile.h>
+
+int main()
+{
+  variables
+  code
+  calls to predefined functions
+  code
+  calls to utility functions 
+  code
+  return 0
+}
+
+void utility1()
+{
+  variables
+  code
+}
+
+float utility2()
+{
+  variables
+  code
+}
